@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/red">
+
+	 <RelativeLayout 
+	        android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="horizontal">
+	
+	        <Button
+	            android:id="@+id/button1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginBottom="76dp"
+	            android:onClick="toMain"
+	            android:text="@string/enter" />
+	
+	        <EditText
+	            android:id="@+id/drawMoney"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/money"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="62dp"
+	            android:ems="10"
+	            android:hint="@string/moneyHint"
+				android:gravity="center"
+	            android:inputType="numberDecimal"
+	            android:singleLine="true" >
+	
+	            <requestFocus />
+	        </EditText>
+	        
+        <TextView
+	        android:id="@+id/balance"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/drawMoney"
+	        android:layout_alignRight="@+id/drawMoney"
+	        android:textStyle="bold" />
+        
+		
+	    <TextView
+	        android:id="@+id/money"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignRight="@+id/button1"
+	        android:layout_marginRight="30dp"
+	        android:layout_marginTop="72dp"
+	        android:gravity="center"
+	        android:text="@string/total"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/add"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/money"
+	        android:layout_marginTop="36dp"
+	        android:gravity="center"
+	        android:text="@string/takeCash"
+	        android:textStyle="bold" />
+	    
+        <TextView
+	        android:id="@+id/newBalance"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/newTotal"
+	        android:layout_alignRight="@+id/newTotal"
+	        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/newTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button1"
+            android:layout_alignRight="@+id/button1"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="@string/newTot"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/newBalance"
+            android:onClick="drawMoney"
+            android:text="@string/save" />
+        
+    </RelativeLayout>
+    
+</LinearLayout>
